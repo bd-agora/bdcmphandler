@@ -33,7 +33,7 @@ The inline script performs the following tasks:
     let s = document.createElement("script");
     s.type = 'module';
     s.id = "bdcmphandler";
-    s.src = '{_SERVER_LOCATIO_}/bdCmpHandler.js?o=' + dataOwner + '&cmp=' + cmp;
+    s.src = '{_SERVER_LOCATION_}/bdCmpHandler.js?o=' + dataOwner + '&cmp=' + cmp;
     h.appendChild(s);
 })();
 </script>
@@ -57,7 +57,7 @@ Host or proxy the bdCmpHandler.js module to serve it from the correct location.
 
 ## ⚠️ Notes
 
-Replace {_SERVER_LOCATIO_} with your production server URL when deploying to a live environment.
+Replace {_SERVER_LOCATION_} with your production server URL when deploying to a live environment.
 
 
 ## 📜 License
