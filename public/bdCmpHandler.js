@@ -6,7 +6,7 @@ import Q    from '../src/Q/Q';
  * BigData Consent Data Handler. 20250711.
  */
 
-window.debugOn = true;
+//window.debugOn = true;
 
 Q.log("Q. Debug On.");
 
