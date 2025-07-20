@@ -1,0 +1,22 @@
+Inline script:
+<script>
+(function(){
+    
+    const dataOwner = "hel"; const cmp = "onetrust";
+    
+    const rodoCookie = document.cookie.match('(^|;)\\s*rodoConsents\\s*=\\s*([^;]+)');
+    
+    window.site_details = window.site_details || {};
+
+    if(rodoCookie) {
+        try {
+            const rodoConsents = JSON.parse(rodoCookie.pop());
+            window.site_details = { ...window.site_details, ...rodoConsents };
+        } catch(e){}
+    } else {
+        window.site_details.tcf_r = false;
+    }
+    
+    let h = document.head; let s = document.createElement("script"); s.type = 'module'; s.id = "bdcmphandler"; s.src = 'http://localhost:5173/bdCmpHandler.js?o='+dataOwner+'&cmp='+cmp; h.appendChild(s);
+})()
+</script>
