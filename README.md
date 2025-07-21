@@ -14,9 +14,9 @@ The inline script performs the following tasks:
 ```html
 <script>
 (function(){
+    const url = "https://storage.googleapis.com/bd-ago/bdCmpHandler.js";
     const dataOwner = "hel";
     const cmp = "onetrust";
-
     const rodoCookie = document.cookie.match('(^|;)\\s*rodoConsents\\s*=\\s*([^;]+)');
     window.site_details = window.site_details || {};
 
@@ -33,7 +33,7 @@ The inline script performs the following tasks:
     let s = document.createElement("script");
     s.type = 'module';
     s.id = "bdcmphandler";
-    s.src = '{_SERVER_LOCATION_}/bdCmpHandler.js?o=' + dataOwner + '&cmp=' + cmp;
+    s.src = url + '?o=' + dataOwner + '&cmp=' + cmp;
     h.appendChild(s);
 })();
 </script>
